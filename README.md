@@ -21,8 +21,12 @@ pip3 install django-filter
 python3 manage.py startapp endpoints
 ```
 5. Create apps, put appname in it 
-6. Change apps.py name to apps.endpoints
-
+6. Change apps.py such that it knows we have moved the endpoints directory into apps
+```
+class EndpointsConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'apps.endpoints'
+```
 7. Edit apps/endpoints/models.py
 8. Good time to migrate the fields into the db. 
 ```

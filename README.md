@@ -2,27 +2,33 @@
 Deploy ML with Django and Docker, I think it's kinda overkill, but a good learning project
 
 1. create venv, pip install django
- virtualenv env
+```
+virtualenv env
 env\Scripts\activate.bat
 pip3 install django
+```
+2. Start project 
+```
 cd backend
-2. django-admin startproject mysite
-3. cd mysite folder
-4. python3 manage.py migrate
+django-admin startproject mysite
+cd mysite folder
 pip3 install djangrestframework
 pip3 install markdown
 pip3 install django-filter
-5. python3 manage.py startapp appname (endpts)
-6. create apps, put appname in it 
-7. change apps.py name to apps.appname
-8. models.py (class charfield)
-9. settings.py (add)
-rest_framewk, apps.endpt, apps.ml
-10. edit apps/endpoints/models.py
-11. add apps/endpoints/serializers.py
-12. edit apps/endpoints/views.py
-13. add the links to urls 
-14. edit settings
+```
+3. python3 manage.py migrate
+4. Start endpoints in the project 
+```
+python3 manage.py startapp endpoints
+```
+5. create apps, put appname in it 
+6. change apps.py name to apps.endpoints
+
+7. edit apps/endpoints/models.py
+8. add apps/endpoints/serializers.py
+9. edit apps/endpoints/views.py
+10. add the links to urls 
+11. edit settings
 ```
   INSTALLED_APPS = [
       'django.contrib.admin',
@@ -36,13 +42,14 @@ rest_framewk, apps.endpt, apps.ml
       'apps.ml'] 
   ROOT_URLCONF = 'misty_dc.urls'
 ```
-16.edit asgi.py 
+12. edit asgi.py 
 ```
   os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'misty_dc.settings')
 ```
-17. edit urls.py
+13. edit urls.py
 ```
   from apps.endpoints.urls import urlpatterns as endpoints_urlpatterns
   urlpatterns += endpoints_urlpatterns
 ```
-19. use wsgi.py to add MLAlgorithm 
+14. Make registry to add connect the ML to server side (the worst nightmare)
+15. use wsgi.py to add MLAlgorithm 

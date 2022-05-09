@@ -22,7 +22,7 @@ rest_framewk, apps.endpt, apps.ml
 11. add apps/endpoints/serializers.py
 12. edit apps/endpoints/views.py
 13. add the links to urls 
-14. edit settings\
+14. edit settings
 ```
   INSTALLED_APPS = [
       'django.contrib.admin',

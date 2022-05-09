@@ -1,5 +1,5 @@
 # misty_dc
-Deploy ML with Django and Docker 
+Deploy ML with Django and Docker, I think it's kinda overkill, but a good learning project
 
 1. create venv, pip install django
  virtualenv env

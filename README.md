@@ -49,6 +49,7 @@ python3 manage.py migrate
       'apps.endpoints',
       'apps.ml'] 
   ROOT_URLCONF = 'misty_dc.urls'
+  SECRET_KEY = 'django-insecure-' # delete just for security reason
 ```
 12. Edit asgi.py 
 ```

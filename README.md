@@ -1,5 +1,6 @@
 # misty_dc
 Deploy ML with Django and Docker, I think it's kinda overkill, but a good learning project
+This is a more fancy setup, if you just deploy one model (not gonna do anything about, refer to misty_dc_light)
 
 1. Create venv and install Django
 ```
